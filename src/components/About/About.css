@@ -1,0 +1,201 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    margin: 80px 120px;
+    background: #ffffff;
+}
+
+/* LEFT IMAGE */
+.about-left img {
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* SECTIONS */
+.about-sections {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+/* RIGHT */
+.about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.about-right h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+/* TEXT */
+.about-para {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #555;
+    line-height: 28px;
+}
+
+.about-para p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ✅ SKILLS SECTION */
+.skills-progress-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* CONTAINER */
+.skills-progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    flex-wrap: wrap; /* ✅ allow wrapping on smaller screens */
+}
+
+/* SKILL ITEM */
+.skill-item {
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* CIRCLE SIZE */
+.skill-item .CircularProgressbar {
+    width: 80px !important;
+    height: 80px !important;
+}
+
+/* TEXT INSIDE */
+.CircularProgressbar-text {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* NAME */
+.skill-name {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+}
+
+/* ACHIEVEMENTS */
+.about-achievements {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 60px;
+}
+
+.about-achievement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: 0.4s;
+}
+
+.about-achievement h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #e17f3e;
+}
+
+.about-achievement p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* DIVIDER */
+.about-achievements hr {
+    height: 50px;
+    width: 1px;
+    background: #ddd;
+    border: none;
+}
+
+/* HOVER */
+.about-achievement:hover {
+    transform: scale(1.08);
+}
+
+
+@media (max-width: 1024px) {
+    .about {
+        margin: 60px 40px;
+    }
+
+    .about-sections {
+        gap: 40px;
+    }
+
+    .about-left img {
+        width: 220px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .about {
+        margin: 40px 20px;
+        gap: 50px;
+        align-items: flex-start;
+    }
+
+    .about-sections {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Hide image */
+    .about-left {
+        display: none;
+    }
+
+    .about-para p {
+        font-size: 16px;
+    }
+
+    /* Skills wrap nicely */
+    .skills-progress-container {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* Achievements stacked */
+    .about-achievements {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .about-achievements hr {
+        display: none;
+    }
+
+    .about-achievement h1 {
+        font-size: 36px;
+    }
+
+    .about-achievement p {
+        font-size: 14px;
+    }
+}

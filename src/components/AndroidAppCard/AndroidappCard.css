@@ -1,0 +1,32 @@
+.popular-way-card {
+  position: relative;
+  width: 330px;
+  height: 220px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popular-way-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.popular-way-label {
+  position: relative;
+  padding: 8px 22px;
+  border-radius: 999px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  z-index: 1;
+}
+
+

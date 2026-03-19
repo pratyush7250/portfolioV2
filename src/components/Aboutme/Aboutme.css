@@ -1,0 +1,41 @@
+.container {
+  margin-top: 100px;
+}
+
+/* Section Titles */
+.container h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+/* ✅ SKILLS SECTION */
+.skills-section {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  width: 120px;
+}
+
+/* Circle Text */
+.CircularProgressbar-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Skill Name */
+.skill-item p {
+  margin-top: 12px;
+  font-weight: 600;
+  color: #333;
+}

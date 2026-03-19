@@ -1,0 +1,61 @@
+.popular-way-container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.popular-way-container h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.popular-way-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    justify-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.view-all-btn {
+    background: #D87027;
+    color: #ffffff;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.view-all-btn:hover{
+    background-color: #C1570D;
+}
+
+
+@media (max-width: 1200px) {
+    .popular-way-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .popular-way-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0px 20px 0px 20px;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .popular-way-grid {
+        grid-template-columns: 1fr;
+
+    }
+}
