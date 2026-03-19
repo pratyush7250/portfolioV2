@@ -1,5 +1,5 @@
 import React from "react";
-import "./hero.css";
+import "./Hero.css";
 import photo from '../../assets/photo.jpg'
 import pdf from '../../assets/Resume.pdf'
 import { MdOutlineFileDownload } from "react-icons/md";
