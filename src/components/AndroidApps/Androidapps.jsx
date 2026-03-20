@@ -18,7 +18,7 @@ const Androidapps = () => {
                 ))}
             </div>
 
-            <button className="view-all-btn">CONTACT ME</button>
+            <a href="#contact"><button className="view-all-btn">CONTACT ME</button></a>
 
         </div>
     )

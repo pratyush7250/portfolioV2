@@ -66,7 +66,7 @@ const Navbar = () => {
            </a>
           </div>
 
-          <button className="desktop-btn">CONTACT ME</button>
+         <a href="#contact"><button className="desktop-btn">CONTACT ME</button></a>
 
           <div className="menu-icon" onClick={() => setDrawerOpen(true)}>
             <FaBars size={22} />
@@ -105,7 +105,7 @@ const Navbar = () => {
 
         </ul>
 
-        <button className="drawer-btn">CONTACT ME</button>
+       <a href="#contact"><button className="drawer-btn">CONTACT ME</button></a>
       </div>
 
       {drawerOpen && <div className="drawer-overlay" onClick={() => setDrawerOpen(false)} />}

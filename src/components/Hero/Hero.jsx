@@ -25,12 +25,12 @@ export default function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <button className="btn-primary">Connect with me</button>
+         <a href="#contact"><button className="btn-primary">Connect me</button></a>
             <a href={pdf} download="Pratyush-Mohanty-Resume.pdf">
 
           <button className="btn-outline">
             <MdOutlineFileDownload size={20} />
-             My Resume
+             Resume
           </button>
           </a>
         </div>
