@@ -8,6 +8,7 @@ import Footer from '../../components/Footer/Footer'
 import Webapp from '../../components/WebApp/Webapp'
 import Skills from '../../components/Skills/Skills'
 import Aboutme from '../../components/Aboutme/Aboutme'
+import ChatBoat from '../../components/Chatboat/ChatBot'
 const Home = () => {
   const { food_list } = useContext(StoreContext)
 
@@ -22,6 +23,7 @@ const Home = () => {
       </div>
       <Aboutme />
       <Footer></Footer>
+      <ChatBoat />
 
     </div>
   )
