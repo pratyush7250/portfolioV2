@@ -3,20 +3,6 @@
     margin-top: 50px;
 }
 
-.rating-bar {
-    background: #D87027;
-    color: #fff;
-    text-align: center;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 15px 0;
-}
-
-.stars svg {
-    color: #ffd700;
-    margin: 0 1px;
-}
-
 .confidence {
     text-align: center;
     padding: 60px 80px;
@@ -28,62 +14,47 @@
     margin-bottom: 50px;
 }
 
-.mywork {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
-}
-
-.mywork-title {
-    position: relative;
-}
-
-.mywork-title h1 {
-    padding: 0px 30px;
-    font-size: 80px;
-    font-weight: 600;
-}
-
-.mywork-title img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-}
-
 .mywork-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
 }
 
-.work-item {
-    position: relative;
+/* Unified Card Design matches the design */
+.work-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px; /* Matches the generous rounded corners */
     overflow: hidden;
-    border-radius: 10px;
-    cursor: pointer;
+    background-color: #e3e3e3; /* Light gray base for the entire card footer */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
-.mywork-container img {
-    box-sizing: border-box;
+/* Image Container */
+.work-image-wrapper {
+    position: relative;
     width: 100%;
     height: 280px;
-    object-fit: cover;
-    transition: 0.3s;
-    cursor: pointer;
-    display: block;
+    overflow: hidden;
 }
 
+.work-img {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Darkened static backdrop style on hover similar to your image */
 .work-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.4); /* Subtle dimming mask */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,53 +62,56 @@
     transition: opacity 0.3s ease;
 }
 
+/* Pill-shaped View Button precisely styled like the mock */
 .work-view-btn {
     background: #e17f3e;
     color: white;
-    padding: 15px 25px;
-    border-radius: 50px;
+    padding: 16px 50px;
+    border-radius: 100px;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 26px; /* Larger stylized text */
+    font-weight: 500;
     border: none;
     cursor: pointer;
-    transition: all 0.3s ease;
-    transform: translateY(20px);
-    box-shadow: 0 2px 15px #d67230;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(0.9);
 }
 
-.work-item:hover .work-overlay {
+/* Hover States */
+.work-card:hover .work-overlay {
     opacity: 1;
 }
 
-.work-item:hover .work-view-btn {
-    transform: translateY(0);
+.work-card:hover .work-view-btn {
+    transform: scale(1);
 }
 
-.work-item:hover img {
-    transform: scale(1.10);
-    border: 4px solid #e17f3e;
-    border-radius: 10px;
-    transition: 0.3s;
+.work-card:hover .work-img {
+    transform: scale(1.04);
 }
 
-.mywork-showmore {
+/* Tech Footer Section */
+.work-footer {
+    padding: 16px 24px;
     display: flex;
-    gap: 15px;
-    border-radius: 50px;
-    border: 2px solid white;
-    padding: 30px 60px;
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 80px;
-    transition: 0.6s;
-    cursor: pointer;
+    justify-content: flex-end; /* Pushes icons to the right side */
+    align-items: center;
+    background-color: #e3e3e3; /* Exact match with image background card */
 }
 
-.mywork-showmore:hover {
-    gap: 30px;
-    transition: 0.6s;
+.tech-icons {
+    display: flex;
+    gap: 14px;
+    align-items: center;
 }
+
+.tech-icon-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* More Info / Footer Controls */
 .confidence-btn {
     margin-top: 50px;
     padding: 12px 30px;
@@ -147,69 +121,29 @@
     font-weight: 700;
     cursor: pointer;
 }
+
 /* Responsive Design */
 @media (max-width: 1200px) {
-    .mywork {
-        margin: 60px 50px;
-    }
-
     .mywork-container {
         grid-template-columns: 1fr 1fr;
-    }
-
-        .confidence-items,
-    .kili-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .mywork {
-        margin: 40px 20px;
-        gap: 40px;
-    }
-
-    .mywork-title h1 {
-        padding: 0;
-        font-size: 50px;
-        font-weight: 600;
-    }
-
-    .mywork-title img {
-        width: 130px;
-        margin-right: -20px;
-    }
-    .mywork-title{
-      margin-bottom: 20px;
+    .confidence {
+        padding: 40px 20px;
     }
 
     .mywork-container {
         grid-template-columns: 1fr;
     }
 
-    .mywork-container img {
-        height: 250px;
+    .work-image-wrapper {
+        height: 240px;
     }
 
     .work-view-btn {
-        padding: 12px 24px;
-        font-size: 16px;
-    }
-
-    .mywork-showmore {
-        padding: 20px 40px;
-        font-size: 18px;
-        margin: 50px auto;
-        cursor: pointer;
-    }
-        .confidence,
-    .kili-trekking {
-        padding: 40px 20px;
+        padding: 12px 35px;
+        font-size: 20px;
     }
 }
-
-
-
-
-
-
